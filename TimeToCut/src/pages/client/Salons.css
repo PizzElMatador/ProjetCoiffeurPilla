@@ -1,0 +1,174 @@
+.salons-page {
+  min-height: 100vh;
+  background: white;
+  padding: 40px 20px;
+}
+
+.salons-header {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.salons-header h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.salons-header p {
+  font-size: 18px;
+  color: #666;
+}
+
+.salons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.salon-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.salon-card:hover {
+  border-color: #667eea;
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.15);
+  transform: translateY(-5px);
+}
+
+.salon-card-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.salon-card h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.salon-card .address {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.salon-card .city {
+  font-size: 14px;
+  font-weight: 500;
+  color: #764ba2;
+  margin-bottom: 12px;
+}
+
+.salon-card .phone {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.salon-card .email {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  word-break: break-all;
+}
+
+.salon-card .description {
+  font-size: 13px;
+  color: #777;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f0;
+  line-height: 1.5;
+}
+
+.salons-loading,
+.salons-error {
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 18px;
+  color: #666;
+}
+
+.salons-error {
+  color: #d32f2f;
+}
+
+@media (max-width: 768px) {
+  .salons-page {
+    padding: 30px 16px;
+  }
+
+  .salons-header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+
+  .salons-header p {
+    font-size: 16px;
+  }
+
+  .salons-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .salon-card {
+    padding: 20px;
+  }
+
+  .salon-card h3 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .salons-page {
+    padding: 20px 12px;
+  }
+
+  .salons-header h1 {
+    font-size: 28px;
+  }
+
+  .salons-header p {
+    font-size: 14px;
+  }
+
+  .salon-card-icon {
+    font-size: 40px;
+  }
+
+  .salon-card h3 {
+    font-size: 16px;
+  }
+
+  .salon-card .address,
+  .salon-card .phone,
+  .salon-card .email {
+    font-size: 13px;
+  }
+}

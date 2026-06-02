@@ -1,0 +1,249 @@
+.mes-reservations-container {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: white;
+}
+
+.mes-reservations-header {
+  max-width: 1200px;
+  margin: 0 auto 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.mes-reservations-header h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.btn-primary {
+  width: auto;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+.reservations-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+}
+
+.reservation-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e0e0e0;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.reservation-card:hover {
+  border-color: #667eea;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.12);
+  transform: translateY(-2px);
+}
+
+.reservation-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.reservation-card h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.reservation-card p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.reservation-card p strong {
+  color: #333;
+  font-weight: 600;
+}
+
+.reservation-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.status {
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: #e8f5e9;
+  color: #2e7d32;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.status.confirmée {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.status.en-attente {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.status.annulée {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.btn-cancel {
+  border: 1.5px solid #ef3b4d;
+  background: white;
+  color: #ef3b4d;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.btn-cancel:hover {
+  background: #ef3b4d;
+  color: white;
+}
+
+.btn-cancel:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.no-reservations {
+  text-align: center;
+  padding: 60px 20px;
+  color: #999;
+}
+
+.no-reservations p {
+  font-size: 18px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .mes-reservations-container {
+    padding: 30px 16px;
+  }
+
+  .mes-reservations-header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+
+  .mes-reservations-header h1 {
+    font-size: 32px;
+  }
+
+  .reservation-card {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .reservation-actions {
+    align-items: flex-start;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .mes-reservations-container {
+    padding: 20px 12px;
+  }
+
+  .mes-reservations-header h1 {
+    font-size: 28px;
+  }
+
+  .reservation-card {
+    padding: 16px;
+  }
+
+  .reservation-card h3 {
+    font-size: 18px;
+  }
+
+  .reservation-card p {
+    font-size: 13px;
+  }
+
+  .btn-cancel {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+}
+
+.empty-card {
+  max-width: 650px;
+  margin: 80px auto 0;
+  background: white;
+  padding: 35px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 10px 28px rgba(40, 32, 20, 0.08);
+}
+
+@media (max-width: 700px) {
+  .mes-reservations-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .reservation-card {
+    grid-template-columns: 1fr;
+  }
+
+  .reservation-actions {
+    align-items: flex-start;
+  }
+}

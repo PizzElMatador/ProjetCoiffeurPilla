@@ -1,0 +1,231 @@
+.dashboard-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dashboard-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-name {
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+.logout-btn {
+  padding: 8px 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.dashboard-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.welcome-section {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.welcome-section h2 {
+  color: #333;
+  font-size: 28px;
+  margin: 0 0 10px 0;
+}
+
+.welcome-section p {
+  color: #666;
+  font-size: 16px;
+  margin: 0;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.step-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-top: 4px solid #667eea;
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.step-card h3 {
+  color: #333;
+  font-size: 18px;
+  margin: 15px 0;
+  font-weight: 600;
+}
+
+.step-card p {
+  color: #666;
+  font-size: 14px;
+  margin: 10px 0 20px 0;
+  line-height: 1.5;
+}
+
+.step-btn {
+  padding: 10px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.step-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(102, 126, 234, 0.3);
+}
+
+.user-info-section {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.user-info-section h3 {
+  color: #333;
+  font-size: 20px;
+  margin: 0 0 20px 0;
+  font-weight: 600;
+}
+
+.user-info-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.info-row {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 3px solid #667eea;
+}
+
+.info-row .label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #999;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.info-row .value {
+  font-size: 15px;
+  color: #333;
+  font-weight: 500;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 18px;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .dashboard-header h1 {
+    font-size: 24px;
+  }
+
+  .welcome-section h2 {
+    font-size: 22px;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .user-info-card {
+    grid-template-columns: 1fr;
+  }
+}
