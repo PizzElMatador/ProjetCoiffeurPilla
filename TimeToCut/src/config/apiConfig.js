@@ -15,10 +15,10 @@ const API_CONFIG = {
     CLIENT_VERIFY: '/api/client/verify',
     CLIENT_LOGOUT: '/api/client/logout',
 
-    // Admin Authentication
-    ADMIN_LOGIN: '/api/admin/login',
-    ADMIN_VERIFY: '/api/admin/verify',
-    ADMIN_LOGOUT: '/api/admin/logout',
+    // Utilisateur Salon (Admin / Coiffeur)
+    UTILISATEUR_SALON_LOGIN: '/api/utilisateur-salon/login',
+    UTILISATEUR_SALON_VERIFY: '/api/utilisateur-salon/verify',
+    UTILISATEUR_SALON_LOGOUT: '/api/utilisateur-salon/logout',
 
     // Prestations
     PRESTATIONS: '/api/prestations',
@@ -27,10 +27,10 @@ const API_CONFIG = {
     // Salons
     SALONS: '/api/salons',
 
-    // Creneaux
+    // Créneaux
     CRENEAUX: '/api/creneaux',
 
-    // Reservations
+    // Réservations
     RESERVATIONS: '/api/reservations',
 
     // Stats

@@ -18,6 +18,9 @@ import AdminPrestations from './pages/admin/AdminPrestations'
 import AdminReservations from './pages/admin/AdminReservations'
 import AdminProfil from './pages/admin/AdminProfil'
 import MesReservations from './pages/client/MesReservations';
+import AdminSalons from './pages/admin/AdminSalons';
+import AdminDashboard from './pages/admin/AdminDashboard';
+
 
 function App() {
   return (
@@ -40,6 +43,14 @@ function App() {
         <Route path="/admin/prestations" element={<AdminPrestations />} />
         <Route path="/admin/reservations" element={<AdminReservations />} />
         <Route path="/admin/profil" element={<AdminProfil />} />
+        <Route path="/coiffeur/reservations" element={<AdminReservations />} />
+        <Route path="/admin/salons" element={<AdminSalons />} />
+        <Route path="/admin/dashboard" element={<AdminDashboard />} />
+
+        {/* Coiffeur Routes */}
+        <Route path="/coiffeur/dashboard" element={<AdminDashboard />} />
+<Route path="/coiffeur/reservations" element={<AdminReservations />} />
+<Route path="/coiffeur/prestations" element={<AdminPrestations />} />
 
         {/* 404 */}
         <Route path="*" element={<Navigate to="/" />} />

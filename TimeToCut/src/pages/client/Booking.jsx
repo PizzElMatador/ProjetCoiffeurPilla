@@ -103,22 +103,39 @@ const Booking = () => {
   };
 
   const fetchOccupiedSlots = async (date, idPrestation) => {
-    try {
-      const response = await fetch(
-        `${API_CONFIG.BASE_URL}/reservations/occupied?date=${date}&id_prestation=${idPrestation}`
-      );
+  try {
+    const response = await fetch(
+      `${API_CONFIG.BASE_URL}${API_CONFIG.ENDPOINTS.RESERVATIONS}/occupied?date=${date}&id_prestation=${idPrestation}`
+    );
 
-      if (!response.ok) {
-        throw new Error('Erreur lors du chargement des créneaux occupés');
+    if (!response.ok) {
+      throw new Error('Erreur lors du chargement des créneaux occupés');
+    }
+
+    const data = await response.json();
+
+    const formattedSlots = data.map((slot) => {
+      if (typeof slot === 'string') {
+        return slot.substring(0, 5);
       }
 
-      const data = await response.json();
-      setOccupiedSlots(data);
-    } catch (error) {
-      console.error(error);
-      setOccupiedSlots([]);
-    }
-  };
+      if (slot.heure_reservation) {
+        return slot.heure_reservation.substring(0, 5);
+      }
+
+      if (slot.heure) {
+        return slot.heure.substring(0, 5);
+      }
+
+      return String(slot).substring(0, 5);
+    });
+
+    setOccupiedSlots(formattedSlots);
+  } catch (error) {
+    console.error(error);
+    setOccupiedSlots([]);
+  }
+};
 
   const handleSelectSalon = (salon) => {
     setBooking({
@@ -172,6 +189,18 @@ const Booking = () => {
     try {
       if (!user || !booking.service || !booking.date || !booking.time) {
         alert('Informations de réservation incomplètes');
+        return;
+      }
+
+      if (occupiedSlots.includes(booking.time)) {
+        alert('Ce créneau vient déjà d’être réservé. Veuillez en choisir un autre.');
+        setBooking({
+          ...booking,
+          time: '',
+        });
+
+        await fetchOccupiedSlots(booking.date, booking.service.id_prestation);
+        setStep(3);
         return;
       }
 
