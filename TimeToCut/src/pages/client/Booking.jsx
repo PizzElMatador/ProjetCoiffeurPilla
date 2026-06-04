@@ -241,20 +241,24 @@ const Booking = () => {
         <h1>Time To Cut</h1>
 
         <div className="user-menu">
-          <button onClick={() => navigate('/booking')} className="nav-link-btn">
-            Réserver
-          </button>
+  <button onClick={() => navigate('/')} className="nav-link-btn">
+    🏠 Accueil
+  </button>
 
-          <button onClick={() => navigate('/mes-reservations')} className="nav-link-btn">
-            Mes réservations
-          </button>
+  <button onClick={() => navigate('/booking')} className="nav-link-btn">
+    Réserver
+  </button>
 
-          <span>{user?.prenom}</span>
+  <button onClick={() => navigate('/mes-reservations')} className="nav-link-btn">
+    Mes réservations
+  </button>
 
-          <button onClick={handleLogout} className="logout-link">
-            Déconnexion
-          </button>
-        </div>
+  <span>{user?.prenom}</span>
+
+  <button onClick={handleLogout} className="logout-link">
+    Déconnexion
+  </button>
+</div>
       </header>
 
       <div className="booking-wrapper">

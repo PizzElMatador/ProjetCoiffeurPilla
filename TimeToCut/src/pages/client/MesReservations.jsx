@@ -84,12 +84,24 @@ const MesReservations = () => {
   return (
     <div className="mes-reservations-container">
       <header className="mes-reservations-header">
-        <h1>Mes réservations</h1>
+  <h1>Mes réservations</h1>
 
-        <button onClick={() => navigate('/booking')} className="btn-primary">
-          Nouvelle réservation
-        </button>
-      </header>
+  <div>
+    <button
+      onClick={() => navigate('/')}
+      className="btn-home"
+    >
+      🏠 Accueil
+    </button>
+
+    <button
+      onClick={() => navigate('/booking')}
+      className="btn-primary"
+    >
+      Nouvelle réservation
+    </button>
+  </div>
+</header>
 
       {loading ? (
         <p>Chargement...</p>

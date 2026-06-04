@@ -341,4 +341,18 @@
   .button-group {
     flex-direction: column;
   }
+
+  .btn-home {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.btn-home:hover {
+  opacity: 0.9;
+}
 }

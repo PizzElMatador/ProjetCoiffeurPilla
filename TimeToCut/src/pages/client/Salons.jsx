@@ -33,6 +33,12 @@ const Salons = () => {
       <div className="salons-header">
         <h1>Nos Salons</h1>
         <p>Découvrez nos {salons.length} emplacements disponibles</p>
+        <button
+    onClick={() => navigate('/')}
+    className="btn-home"
+  >
+    🏠 Retour à l'accueil
+  </button>
       </div>
       <div className="salons-grid">
         {salons.map((salon) => (
