@@ -26,6 +26,29 @@
   color: #666;
 }
 
+.btn-home {
+  margin-top: 16px;
+  background: linear-gradient(135deg, #6c63ff, #8b5cf6);
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(108, 99, 255, 0.25);
+  transition: all 0.25s ease;
+}
+
+.btn-home:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(108, 99, 255, 0.35);
+}
+
+.btn-home:active {
+  transform: translateY(0);
+}
+
 .salons-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -171,27 +194,4 @@
   .salon-card .email {
     font-size: 13px;
   }
-
-  .btn-home {
-  margin-top: 16px;
-  background: linear-gradient(135deg, #6c63ff, #8b5cf6);
-  color: white;
-  border: none;
-  border-radius: 999px;
-  padding: 12px 22px;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 8px 20px rgba(108, 99, 255, 0.25);
-  transition: all 0.25s ease;
-}
-
-.btn-home:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(108, 99, 255, 0.35);
-}
-
-.btn-home:active {
-  transform: translateY(0);
-}
 }
